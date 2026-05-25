@@ -6,35 +6,37 @@ export function About() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="About"
-          title="One portfolio, three security domains"
-          description="AppSec, SOC, and GRC — each project maps to work you can inspect, run, and hire for."
+          title="Engineered defense across three critical layers"
+          description="A hands-on engineering approach to Application Security, Detection Operations, and Risk Management."
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-4 text-sm leading-relaxed text-text-muted sm:text-base">
             <p>
-              I work across{" "}
+              I design and implement defensive measures across{" "}
               <strong className="font-medium text-text">
-                application security, security operations, and governance, risk
-                & compliance
+                application security, detection engineering, and compliant
+                architectures
               </strong>
-              . The projects here are deliberately hands-on — not slide decks or
-              cert badges — so you can see how I think in each domain.
+              . My approach is rooted in software engineering—building tools,
+              testing telemetry, and writing code to solve security problems
+              systematically.
             </p>
             <p>
-              Today the catalog leans AppSec and SOC: secure coding labs, timed
-              code review drills, and a full phishing triage pipeline. GRC work
-              lands here as it ships — risk assessments, control mapping, and
-              compliance-ready tooling alongside the rest.
+              The technical work showcased here represents functional,
+              deployable systems rather than conceptual theories. This includes
+              secure coding labs exploring vulnerability mechanics, custom code
+              auditing tools, and automated security operation pipelines
+              designed to reduce response latency.
             </p>
             <p className="font-mono text-xs text-text-dim">
-              {profile.location}
+              Current Focus: {profile.location}
             </p>
           </div>
 
           <div className="rounded-2xl border border-border bg-bg-card p-6 font-mono text-sm">
             <p className="mb-3 text-xs uppercase tracking-wider text-text-dim">
-              Focus areas
+              Core Core Domains
             </p>
             <ul className="space-y-4 text-text-muted">
               {focusAreas.map((area, index) => (

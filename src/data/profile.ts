@@ -1,14 +1,14 @@
 import { projects } from "./projects";
 
-/** Personal info — update these fields with your details */
+/** Personal info — updated for international remote positioning */
 export const profile = {
   name: "Kenny Onifade",
-  title: "Cybersecurity Professional",
+  title: "Security Engineer & Code Auditor",
   headline:
-    "AppSec, SOC, and GRC — finding risk in code, triaging threats, and helping teams act on it.",
-  bio: "Cybersecurity professional working across application security, security operations, and governance, risk & compliance. Current projects span secure coding labs, adversarial code review tooling, and SOC-grade phishing triage — with GRC and operations work expanding here over time.",
+    "Bridging the gap between code and compliance — AppSec engineering, automated triage, and risk remediation.",
+  bio: "Software engineer turned Security Engineer specializing in Application Security (AppSec) and Security Operations. I build secure coding labs, design adversarial code review tools, and engineer automated SOC triage workflows. My focus is delivering actionable, remediation-first security that helps engineering teams ship secure code without losing velocity.",
   email: "onifkay@gmail.com",
-  location: "Open to remote & hybrid roles",
+  location: "Remote (UTC-1 to UTC+3 preferred) / Open to Relocation",
   github: "https://github.com/kendoriddy",
   linkedin: "https://www.linkedin.com/in/kehindeonifade/",
   resumeUrl: "https://cyber.kennyonifade.com",
@@ -18,17 +18,17 @@ export const focusAreas = [
   {
     label: "Application Security",
     description:
-      "Secure coding, adversarial code review, OWASP vulnerability classes, and remediation patterns teams can ship.",
+      "Static and dynamic code analysis, adversarial code review, and designing automated remediation patterns that seamlessly integrate into modern CI/CD pipelines.",
   },
   {
-    label: "SOC & Operations",
+    label: "SOC & Detection Engineering",
     description:
-      "Phishing triage, IOC extraction, threat intel enrichment, YARA matching, and incident response workflows.",
+      "Engineering automated phishing triage pipelines, IOC extraction, threat intelligence enrichment via APIs, and authoring custom YARA/Sysmon detection rules.",
   },
   {
-    label: "GRC",
+    label: "Risk & Compliance (GRC)",
     description:
-      "Risk assessment, control mapping, compliance frameworks, and documentation that turns findings into action.",
+      "Translating complex compliance frameworks into practical engineering controls, mapping risks, and generating audit-ready technical documentation.",
   },
 ];
 
@@ -36,39 +36,44 @@ export const skills = [
   {
     area: "Application Security",
     items: [
-      "Manual code review",
-      "OWASP Top 10",
-      "Secure remediation",
-      "CVSS triage",
+      "Adversarial Code Review",
+      "OWASP Top 10 / CWE Mapping",
+      "Secure Remediation Design",
+      "Vulnerability Triage (CVSS)",
     ],
   },
   {
-    area: "SOC & Operations",
+    area: "SOC & Detection",
     items: [
-      "Phishing triage",
-      "IOC extraction",
-      "YARA rules",
-      "Threat intel APIs",
+      "SIEM & Endpoint Monitoring",
+      "Automated Triage Pipelines",
+      "YARA Rules & Sysmon Configuration",
+      "Threat Intel API Integration",
     ],
   },
   {
-    area: "GRC & Risk",
+    area: "GRC & Engineering Risk",
     items: [
-      "Risk assessment",
-      "Control frameworks",
-      "Policy & standards",
-      "Audit evidence",
+      "Technical Control Mapping",
+      "Risk Assessment & Mitigation",
+      "Security Policy as Code",
+      "Audit Evidence Gathering",
     ],
   },
   {
-    area: "Stack",
-    items: ["TypeScript / React", "Python / Flask", "TanStack Start", "SQLite"],
+    area: "Security & Dev Stack",
+    items: [
+      "Wazuh SIEM / Sysmon",
+      "Python / Flask",
+      "TypeScript / React / TanStack Start",
+      "Supabase / SQLite",
+    ],
   },
 ];
 
 export const stats = [
-  { label: "Projects", value: String(projects.length) },
-  { label: "Domains", value: "3" },
-  { label: "Vuln Classes", value: "14+" },
-  { label: "Triage Signals", value: "20+" },
+  { label: "Security Projects", value: String(projects.length) },
+  { label: "Core Domains", value: "3" },
+  { label: "Vulnerability Classes Covered", value: "14+" },
+  { label: "Automated Triage Signals", value: "20+" },
 ];

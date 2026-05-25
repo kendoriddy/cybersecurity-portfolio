@@ -12,9 +12,9 @@ export function ProjectsSection() {
     <section id="projects" className="py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Projects"
-          title="Projects across AppSec, SOC & GRC"
-          description="Filter by domain, category, or keyword. Add new projects in src/data/projects.ts as your catalog grows."
+          eyebrow="Labs & Tooling"
+          title="Security engineering artifacts"
+          description="Explore functional implementations, detection rules, and vulnerability remediation labs filtered by domain or technical stack."
         />
 
         <div className="mb-10">
@@ -55,14 +55,14 @@ function EmptyState({ onClear }: { onClear: () => void }) {
         aria-hidden
       />
       <p className="font-mono text-sm text-text-muted">
-        No projects match your filters.
+        No engineering artifacts match the selected criteria.
       </p>
       <button
         type="button"
         onClick={onClear}
         className="mt-4 font-mono text-xs text-accent underline-offset-2 hover:underline"
       >
-        Clear filters
+        Reset active filters
       </button>
     </div>
   );

@@ -1,4 +1,5 @@
 import {
+  BookOpen,
   ExternalLink,
   Github,
   Globe,
@@ -13,10 +14,12 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const { github, web, webLabel = "Live Site" } = project.links;
+  const { github, web, webLabel = "Live Site", documentation } = project.links;
   const webUrl = normalizeUrl(web);
   const githubUrl = normalizeUrl(github);
+  const documentationUrl = documentation ? normalizeUrl(documentation) : "";
   const hasWebLink = webUrl.length > 0;
+  const hasDocumentation = documentationUrl.length > 0;
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-bg-card transition duration-300 hover:border-accent/30 hover:glow-border">
@@ -89,6 +92,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           webLabel={webLabel}
           hasWebLink={hasWebLink}
           web={webUrl}
+          documentation={documentationUrl}
+          hasDocumentation={hasDocumentation}
         />
       </div>
     </article>
@@ -99,12 +104,16 @@ function ProjectLinks({
   github,
   web,
   webLabel,
+  documentation,
   hasWebLink,
+  hasDocumentation,
 }: {
   github: string;
   web: string;
   webLabel: string;
+  documentation: string;
   hasWebLink: boolean;
+  hasDocumentation: boolean;
 }) {
   return (
     <div className="mt-auto space-y-3 border-t border-border pt-5">
@@ -115,11 +124,19 @@ function ProjectLinks({
         {hasWebLink && (
           <LinkButton href={web} icon={Globe} label={webLabel} primary />
         )}
+        {hasDocumentation && (
+          <LinkButton
+            href={documentation}
+            icon={BookOpen}
+            label="Docs"
+            primary={!hasWebLink}
+          />
+        )}
         <LinkButton
           href={github}
           icon={Github}
           label="GitHub"
-          primary={!hasWebLink}
+          primary={!hasWebLink && !hasDocumentation}
         />
       </div>
       {!hasWebLink && (
